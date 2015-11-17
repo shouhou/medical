@@ -1,0 +1,346 @@
+/*  reset.css  */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: courier new, courier, monospace;
+}
+
+small {
+    font-size: 12px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+legend {
+    color: #000;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+mark {
+    background: #ff0;
+}
+
+/* bootstrap.css */
+
+.span24 {
+    width: 950px;
+}
+
+.span23 {
+    width: 910px;
+}
+
+.span22 {
+    width: 870px;
+}
+
+.span21 {
+    width: 830px;
+}
+
+.span20 {
+    width: 790px;
+}
+
+.span19 {
+    width: 750px;
+}
+
+.span18 {
+    width: 710px;
+}
+
+.span17 {
+    width: 670px;
+}
+
+.span16 {
+    width: 630px;
+}
+
+.span15 {
+    width: 590px;
+}
+
+.span14 {
+    width: 550px;
+}
+
+.span13 {
+    width: 510px;
+}
+
+.span12 {
+    width: 470px;
+}
+
+.span11 {
+    width: 430px;
+}
+
+.span10 {
+    width: 390px;
+}
+
+.span9 {
+    width: 350px;
+}
+
+.span8 {
+    width: 310px;
+}
+
+.span7 {
+    width: 270px;
+}
+
+.span6 {
+    width: 230px;
+}
+
+.span5 {
+    width: 190px;
+}
+
+.span4 {
+    width: 150px;
+}
+
+.span3 {
+    width: 110px;
+}
+
+.span2 {
+    width: 70px;
+}
+
+.span1 {
+    width: 30px;
+}
+
+.offset24 {
+    margin-left: 970px;
+}
+
+.offset23 {
+    margin-left: 930px;
+}
+
+.offset22 {
+    margin-left: 890px;
+}
+
+.offset21 {
+    margin-left: 850px;
+}
+
+.offset20 {
+    margin-left: 810px;
+}
+
+.offset19 {
+    margin-left: 770px;
+}
+
+.offset18 {
+    margin-left: 730px;
+}
+
+.offset17 {
+    margin-left: 690px;
+}
+
+.offset16 {
+    margin-left: 650px;
+}
+
+.offset15 {
+    margin-left: 610px;
+}
+
+.offset14 {
+    margin-left: 570px;
+}
+
+.offset13 {
+    margin-left: 530px;
+}
+
+.offset12 {
+    margin-left: 490px;
+}
+
+.offset11 {
+    margin-left: 450px;
+}
+
+.offset10 {
+    margin-left: 410px;
+}
+
+.offset9 {
+    margin-left: 370px;
+}
+
+.offset8 {
+    margin-left: 330px;
+}
+
+.offset7 {
+    margin-left: 290px;
+}
+
+.offset6 {
+    margin-left: 250px;
+}
+
+.offset5 {
+    margin-left: 210px;
+}
+
+.offset4 {
+    margin-left: 170px;
+}
+
+.offset3 {
+    margin-left: 130px;
+}
+
+.offset2 {
+    margin-left: 90px;
+}
+
+.offset1 {
+    margin-left: 50px;
+}
+
+.row {
+    margin-left: -10 px
+}
+
+.row:after,
+.row:before {
+    content: " ";
+    display: table
+}
+
+.row: after {
+    clear: both
+}
+
+[class *="span"] {
+    float: left;
+    margin-left: 10px;
+}

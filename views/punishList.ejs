@@ -1,0 +1,66 @@
+<%- include header %>
+    <div class="title">
+        重大问题决策接口</div>
+    <table>
+        <tr>
+            <th>
+                <input type="checkbox">
+            </th>
+            <th>事件ID</th>
+            <th>事件名称</th>
+            <th>申请时间</th>
+            <th>决策类型</th>
+            <th>决策时间</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>23123</td>
+            <td>发大水发的谁</td>
+            <td>发大水发的谁</td>
+            <td>2012.21.12</td>
+            <td>2012.21.12</td>
+            <td><input type="button" class='tb-button' value="上传"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>23123</td>
+            <td>发大水发的谁</td>
+            <td>发大水发的谁</td>
+            <td>2012.21.12</td>
+            <td>2012.21.12</td>
+            <td><input type="button" class='tb-button' value="上传"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>23123</td>
+            <td>发大水发的谁</td>
+            <td>发大水发的谁</td>
+            <td>2012.21.12</td>
+            <td>2012.21.12</td>
+            <td><input type="button" class='tb-button' value="上传"></td>
+        </tr>
+    </table>
+    <div class="row">
+        <div class="span1 label">&nbsp;</div>
+        <div class="span8">
+            <input type="submit" value="手动上传" class="button-normal J_submit">
+        </div>
+        <div class="span1 label">&nbsp;</div>
+        <div class="span8">
+            <input type="submit" value="批量上传" class="button-normal J_batchSubmit">
+        </div>
+    </div>
+    <script>
+    seajs.use("common/dict", function(dict) {
+        console.log(dict.DIC_JUECE);
+        
+    })
+    </script>
+    <%- include footer %>
