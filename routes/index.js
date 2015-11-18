@@ -1,11 +1,11 @@
 var express = require('express'),
     router = express.Router(),
-    punish = require('../models/punish'),
     url = require('url'),
     querystring = require("querystring");
 
-var soap = require('../service/soap');
-
+var punish = require('../models/punish'),
+    log = require('../models/common/log').log,
+    soap = require('../service/soap');
 /* GET home page. */
 router.get('/', function(req, res) {
     res.render('index', {});
@@ -21,10 +21,15 @@ router.get('/punishList', function(req, res) {
 
 router.post('/punishList/rpc', function(req, res) {
     var id = req.param('id');
-    var rs = {
-        'success': true
-    }
-    res.send(rs);
+    punish.getPunishById(id, function(data) {
+        var soapJSON = punish.getJSON(data);
+        soap.sendReq(soapJSON, function(data) {
+            var rs = {
+                'success': true
+            };
+            res.send(rs);
+        });
+    });
 });
 
 router.post('/punishList/batchRPC', function(req, res) {

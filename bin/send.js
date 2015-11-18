@@ -64,7 +64,7 @@ var data = ['<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instan
 ].join('');
 
 var options = {
-    host: '127.0.0.1',
+    host: 'localhost',
     port: 8888,
     method: 'POST',
     path: 'https://59.211.16.98:4439/BasWebService.asmx?wsdl',//url

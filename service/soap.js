@@ -1,45 +1,11 @@
-var http = require('http');
-var https = require('https');
+var http = require('http'),
+    https = require('https'),
+    xml2js = require('xml2js'),
+    fs = require("fs");
 
-var xml2js = require('xml2js');
-var fs = require("fs");
+var log = require('../models/common/log').log;
 
 var builder = new xml2js.Builder(); //JSON->xml
-
-var reqJSON = {
-    "Request": {
-        "Head": {
-            "Function": "MAJOR_ISSUES",
-            "Operation": "0"
-        },
-        "Body": {
-            "MAJOR_ISSUES": {
-                "MAIN": {
-                    "UNIT_CODE": "1001",
-                    "UNIT_NAME": "卫生统计信息中心",
-                    "EVENT_NUM": "1",
-                    "ORG_CODE": "10001",
-                    "EVENT_ID": "10002",
-                    "EVENT_NAME": "重大人事任免事件",
-                    "PROCEDURE": "1",
-                    "EVENT_DATE_TIME": "2015-08-21 00:00:00"
-                },
-                "DETAIL": {
-                    "UNIT_CODE": "1001",
-                    "EVENT_ID": "10002",
-                    "DECISION_TYPE": "1",
-                    "PROCEDURED_DETAIL_ID": "100001",
-                    "DECISION_DATE_TIME": "2015-08-25 00:00:00",
-                    "DECISION_RESULT": "重大人事任免事件决策",
-                    "PUBLIC_TYPE": "1",
-                    "PUBLIC_DTAE_TIME": "2015-08-25 00:00:00",
-                    "PUBLIC_RESULT": "重大人事任公示结果/通过",
-                    "RECOMMEN_TYPE": "1"
-                }
-            }
-        }
-    }
-}
 
 var options = {
     host: '127.0.0.1',
@@ -66,6 +32,11 @@ function fetchReq(options, type, data, callback) {
         console.log("statusCode: ", res.statusCode);
         console.log("headers: ", res.headers);
 
+        var resTimer = setTimeout(function() {
+            res.destroy();
+            log('WS-请求超时');
+        }, 10000);//10秒超时
+
         // res.setEncoding('binary');utf8
         res.setEncoding(type);
         res.on('error', function(err) {
@@ -87,6 +58,7 @@ module.exports = {
     sendReq: function(reqJSON, callback) {
         reqXml = builder.buildObject(reqJSON);
         reqXml = reqXml.substring(reqXml.indexOf('<Request>'), reqXml.length);
+
         var unitCode = 4509020020;
         var data = ['<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">',
             '<soap12:Header>',
@@ -106,7 +78,9 @@ module.exports = {
             '</soap12:Envelope>'
         ].join('');
 
+        log('WS-发送报文: ', data);
         fetchReq(options, 'utf-8', data, function(res) {
+            log('WS-接收报文: ', res);
             callback(res);
         });
     }

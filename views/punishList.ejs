@@ -1,47 +1,57 @@
 <%- include header %>
-    <div class="title">
-        重大问题决策接口</div>
-    <table>
-        <tr>
-            <th>
-                <input type="checkbox" class='J_CheckAll'>
-            </th>
-            <th>事件ID</th>
-            <th>事件名称</th>
-            <th>申请时间</th>
-            <th>决策类型</th>
-            <th>决策时间</th>
-            <th>操作</th>
-        </tr>
-        <% data.forEach(function(punish){ %>
+<div class="title">
+    重大问题决策接口</div>
+<table>
+    <tr>
+        <th>
+            <input type="checkbox" class='J_CheckAll'>
+        </th>
+        <th>事件ID</th>
+        <th>事件名称</th>
+        <th>申请时间</th>
+        <th>决策类型</th>
+        <th>决策时间</th>
+        <th>操作</th>
+    </tr>
+    <% data.forEach(function(punish){ %>
         <tr>
             <td>
                 <input type="checkbox" class='J_CheckBox' value='<%= punish.id %>'>
             </td>
-            <td><%= punish.event_id %></td>
-            <td><%= punish.event_name %></td>
-            <td><%= punish.event_date_time %></td>
-            <td><%= punish.decision_type %></td>
-            <td><%= punish.decision_date_time %></td>
+            <td>
+                <%= punish.event_id %>
+            </td>
+            <td>
+                <%= punish.event_name %>
+            </td>
+            <td>
+                <%= punish.event_date_time %>
+            </td>
+            <td>
+                <%= punish.decision_type %>
+            </td>
+            <td>
+                <%= punish.decision_date_time %>
+            </td>
             <td>
                 <input type="button" class='tb-button J_Upload' value="上传">
             </td>
         </tr>
         <% }) %>
-    </table>
-    <div class="row">
-        <div class="span1 label">&nbsp;</div>
-        <div class="span3">
-            <input type="submit" value="手动上传" class="button-normal J_ManualUpload">
-        </div>
-        <div class="span3">
-            <input type="submit" value="批量上传" class="button-normal J_BatchUpload">
-        </div>
+</table>
+<div class="row">
+    <div class="span1 label">&nbsp;</div>
+    <div class="span3">
+        <input type="submit" value="手动上传" class="button-normal J_ManualUpload">
     </div>
-    <script>
-    seajs.use("page/punishList", function(Page) {
-        var page = new Page();
-        page.init();
-    })
-    </script>
-    <%- include footer %>
+    <div class="span3">
+        <input type="submit" value="批量上传" class="button-normal J_BatchUpload">
+    </div>
+</div>
+<script>
+seajs.use("page/punishList", function(Page) {
+    var page = new Page();
+    page.init();
+})
+</script>
+<%- include footer %>
