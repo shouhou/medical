@@ -1,11 +1,11 @@
 <%- include header %>
 <div class="title">
     重大问题决策接口</div>
-<form action="/punishAdd/submit" method="get">
+<form action="/punishAdd/form" method="get">
     <div class="row">
         <div class="span2 label">申请人：</div>
         <div class="span8">
-            <input type="text" name="appler" class='input-normal'>
+            <input type="text" class='input-normal'>
         </div>
         <div class="span2 label">申请时间：</div>
         <div class="span4">
@@ -31,12 +31,19 @@
         </div>
     </div>
     <div class="row">
-        <div class="span2 label">项目列别：</div>
+        <div class="span2 label">项目类别：</div>
         <div class="span8">
             <select name="" class="select-normal">
                 <option value="1">B、一般事项决策</option>
                 <option value="1">B、一般事项决策</option>
                 <option value="1">B、一般事项决策</option>
+            </select>
+        </div>
+        <div class="span2 label">流入流程：</div>
+        <div class="span8">
+            <select name="" class="select-normal">
+                <option value="1" selected>是</option>
+                <option value="2">否</option>
             </select>
         </div>
     </div>

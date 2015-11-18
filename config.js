@@ -1,7 +1,15 @@
+// exports = module.exports = {
+//     host: 'localhost',
+//     user: 'root',
+//     password: '123456',
+//     database: 'blog',
+//     port: 3306
+// };
+
 exports = module.exports = {
-    host: 'localhost',
+    host: '172.18.0.80',
     user: 'root',
-    password: '123456',
-    database: 'blog',
+    password: 'myoa888',
+    database: 'td_oa',
     port: 3306
 };

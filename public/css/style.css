@@ -45,8 +45,8 @@ body {}
 .side {
     float: left;
     width: 200px;
-    height: 600px;
-    min-height: 600px;
+    height: 800px;
+    min-height: 800px;
     border-right: 1px solid #ccc;
 }
 

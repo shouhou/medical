@@ -19,18 +19,33 @@ router.get('/punishList', function(req, res) {
     });
 });
 
+router.post('/punishList/rpc', function(req, res) {
+    var id = req.param('id');
+    var rs = {
+        'success': true
+    }
+    res.send(rs);
+});
+
+router.post('/punishList/batchRPC', function(req, res) {
+    var ids = req.param('ids');
+    console.log(ids);
+    var rs = {
+        'success': true
+    }
+    res.send(rs);
+});
 
 router.get('/punishAdd', function(req, res) {
-    res.render('punishAdd', {
-    });
+    res.render('punishAdd', {});
 });
 
-router.get('/punishAdd/submit', function(req, res) {
-    var objectUrl = url.parse(req.url);
-    var objectQuery = querystring.parse(objectUrl.query);
+router.get('/punishAdd/form', function(req, res) {
+    // var objectUrl = url.parse(req.url);
+    // var objectQuery = querystring.parse(objectUrl.query);
     // var event_name = objectQuery.event_name;
-    soap.sendReq(objectQuery, function(data) {});
+    // console.log(req.body);
+    // soap.sendReq(objectQuery, function(data) {
+    // });
 });
-
-
 module.exports = router;
