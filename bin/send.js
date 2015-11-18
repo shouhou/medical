@@ -64,7 +64,7 @@ var data = ['<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instan
 ].join('');
 
 var options = {
-    host: 'localhost',
+    host: '127.0.0.1',
     port: 8888,
     method: 'POST',
     path: 'https://59.211.16.98:4439/BasWebService.asmx?wsdl',//url
@@ -77,7 +77,7 @@ var options = {
 };
 
 function fetchReq(options, type, data, callback) {
-    var req = https.request(options);
+    var req = http.request(options);
     var chunks = '';
     // var chunks = [];
     req.on('error', function(err) {
