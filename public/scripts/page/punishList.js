@@ -20,10 +20,16 @@ define('page/punishList', [], function(require) {
                         'ids': ids.join(',')
                     },
                     success: function(data) {
-                        if (data && data.success) {
+                        var errIds = [];
+                        for (var i in data) {
+                            if (!data[i].success) {
+                                errIds.push(data[i].id);
+                            }
+                        }
+                        if (errIds.length = 0) {
                             alert('上传成功');
                         } else {
-                            alert('上传失败');
+                            alert('上传失败ID: ' + errIds.join[',']);
                         }
                     },
                     error: function() {
@@ -51,7 +57,7 @@ define('page/punishList', [], function(require) {
                                 if (data && data.success) {
                                     alert('上传成功');
                                 } else {
-                                    alert('上传失败');
+                                    alert('上传失败: ' + data.message);
                                 }
                             },
                             error: function() {

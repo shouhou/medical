@@ -1,7 +1,7 @@
 var _ = require('underscore');
 var conn = require('./common/conn');
 var util = require('./common/util');
-var _ = require('underscore');
+var log = require('./common/log').log;
 
 var json = {
     'id': 'id',
@@ -76,9 +76,16 @@ module.exports = {
         data.org_code = '49936034-6';
         data.event_num = 1;
         data.procedure = 1;
-        
+
         var tpl = JSON.stringify(reqJSON);
         var out = _.template(tpl)(data);
-        return JSON.parse(out);
+        var json = {};
+        try {
+            json = JSON.parse(out);
+        } catch (e) {
+            log('NB-JSON解析错误',out);
+            throw(e);
+        }
+        return json;
     }
 };

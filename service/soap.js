@@ -11,7 +11,8 @@ var options = {
     host: '127.0.0.1',
     port: 8888,
     method: 'POST',
-    path: 'https://59.211.16.98:4439/BasWebService.asmx?wsdl', //url
+    // path: 'https://59.211.16.98:4439/BasWebService.asmx?wsdl', //url
+    path: 'https://shouhou91.eicp.net:26402/BasWebService.asmx?wsdl', //url
     headers: {
         // 'Content-Type': 'text/xml; charset=utf-8',
         // 'Content-Length': Buffer.byteLength(data),
@@ -21,21 +22,23 @@ var options = {
 };
 
 function fetchReq(options, type, data, callback) {
-    var req = https.request(options);
+    var req = http.request(options);
     var chunks = '';
     // var chunks = [];
     req.on('error', function(err) {
         console.log('req:', err);
     });
 
+    var req_timer = setTimeout(function() {
+        if (chunks.length == 0) {
+            req.abort();
+            log('WS-请求发出超时');
+        }
+    }, 5000);
+
     req.on('response', function(res) {
         console.log("statusCode: ", res.statusCode);
         console.log("headers: ", res.headers);
-
-        var resTimer = setTimeout(function() {
-            res.destroy();
-            log('WS-请求超时');
-        }, 10000);//10秒超时
 
         // res.setEncoding('binary');utf8
         res.setEncoding(type);
@@ -49,9 +52,28 @@ function fetchReq(options, type, data, callback) {
         res.on('end', function() { //Buffer.concat(chunks) 乱码
             callback(chunks)
         });
+
+        var resTimer = setTimeout(function() {
+            if (chunks.length == 0) {
+                res.destroy();
+                log('WS-请求响应超时');
+            }
+        }, 10000); //10秒超时
     });
     req.write(data + "\n");
     req.end();
+}
+
+function parseRes(res, type) {
+    // <PunishDataUploadResult>1,成功</PunishDataUploadResult>
+    res = res.replace(/ /g, '');
+    var data = res.substring(res.indexOf('<' + type + '>') + type.length + 2, res.indexOf('</' + type + '>'));
+    var rtn = {
+        'success': data.indexOf('成功') > 0 ? true : false,
+        'message': data
+    };
+    console.log(rtn);
+    return rtn;
 }
 
 module.exports = {
@@ -81,7 +103,8 @@ module.exports = {
         log('WS-发送报文: ', data);
         fetchReq(options, 'utf-8', data, function(res) {
             log('WS-接收报文: ', res);
-            callback(res);
+            var rtn = parseRes(res, 'PunishDataUploadResult');
+            callback(rtn);
         });
     }
 }

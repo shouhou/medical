@@ -1,6 +1,7 @@
 var express = require('express'),
     router = express.Router(),
     url = require('url'),
+    async = require('async'),
     querystring = require("querystring");
 
 var punish = require('../models/punish'),
@@ -21,24 +22,45 @@ router.get('/punishList', function(req, res) {
 
 router.post('/punishList/rpc', function(req, res) {
     var id = req.param('id');
+
+
     punish.getPunishById(id, function(data) {
+        console.log('rpc:', id);
+
         var soapJSON = punish.getJSON(data);
-        soap.sendReq(soapJSON, function(data) {
-            var rs = {
-                'success': true
-            };
-            res.send(rs);
-        });
+        // soap.sendReq(soapJSON, function(data) {
+        //     res.send(data);
+        // });
+        console.log(soapJSON);
+        res.send({
+            'success': true,
+            'message': '上传成功'
+        })
     });
 });
 
+
 router.post('/punishList/batchRPC', function(req, res) {
-    var ids = req.param('ids');
-    console.log(ids);
-    var rs = {
-        'success': true
+    var ids = req.param('ids').split(',');
+    var funcs = [];
+    for (var i = 0, len = ids.length; i < len; i++) {
+        var id = ids[i];
+        var func = async.apply(function(id, callback) {
+            punish.getPunishById(id, function(data) {
+                var soapJSON = punish.getJSON(data);
+                soap.sendReq(soapJSON, function(data) {
+                    data.id = id;
+                    callback(null, data);
+                });
+            });
+        }, id);
+        funcs.push(func);
     }
-    res.send(rs);
+    async.parallel(funcs, function(err, results) {
+        log('batchRPC complete');
+        log(results);
+        res.send(results);
+    });
 });
 
 router.get('/punishAdd', function(req, res) {
