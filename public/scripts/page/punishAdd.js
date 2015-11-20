@@ -12,7 +12,7 @@ define('page/punishAdd', ['common/util'], function(require) {
         },
         initEvent: function() {
             $('.J_Return').on('click', function(event) {
-                window.location = '/punishList';
+                window.location = '/punish/punishList';
             });
             $('.J_Submit').on('click', function(event) {
                 event.preventDefault();
