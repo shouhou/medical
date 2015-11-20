@@ -1,11 +1,11 @@
 var http = require('http'),
     https = require('https'),
-    xml2js = require('xml2js'),
+    // xml2js = require('xml2js'),
     fs = require("fs");
 
 var log = require('../models/common/log').log;
 
-var builder = new xml2js.Builder(); //JSON->xml
+// var builder = new xml2js.Builder(); //JSON->xml
 
 var options = {
     host: '127.0.0.1',
@@ -77,10 +77,9 @@ function parseRes(res, type) {
 }
 
 module.exports = {
-    sendReq: function(reqJSON, callback) {
-        reqXml = builder.buildObject(reqJSON);
-        reqXml = reqXml.substring(reqXml.indexOf('<Request>'), reqXml.length);
-
+    sendReq: function(out, callback) {
+        // reqXml = builder.buildObject(reqJSON);
+        // reqXml = reqXml.substring(reqXml.indexOf('<Request>'), reqXml.length);
         var unitCode = 4509020020;
         var data = ['<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">',
             '<soap12:Header>',
@@ -93,7 +92,7 @@ module.exports = {
             '<soap12:Body>',
             '<PunishDataUpload xmlns="http://www.gxws.gov.cn/">',
             '<xml> <![CDATA[',
-            reqXml,
+            out,
             ']]></xml>',
             '</PunishDataUpload>',
             '</soap12:Body>',

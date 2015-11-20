@@ -170,12 +170,12 @@ body {}
     background-color: #F78B19;
 }
 
-table {
+.table {
     width: 900px;
     margin: 0 auto;
 }
 
-table th {
+.table th {
     font-family: 'simhei';
     font-size: 16px;
     font-weight: normal;
@@ -187,14 +187,14 @@ table th {
     text-align: center;
 }
 
-table td {
+.table td {
     height: 28px;
     line-height: 28px;
     text-align: center;
     border-bottom: 1px dashed #ccc;
 }
 
-table .tb-button {
+.table .tb-button {
     width: 40px;
     height: 23px;
     line-height: 23px;

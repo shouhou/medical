@@ -1,10 +1,11 @@
 <%- include header %>
 <div class="title">
     重大问题决策接口</div>
+<div class='table'>
 <table>
     <tr>
         <th>
-            <input type="checkbox" class='J_CheckAll'>
+            <input type="checkbox" class='J_CheckAll'>全选
         </th>
         <th>事件ID</th>
         <th>事件名称</th>
@@ -39,6 +40,7 @@
         </tr>
         <% }) %>
 </table>
+</div>
 <div class="row">
     <div class="span1 label">&nbsp;</div>
     <div class="span3">
@@ -51,7 +53,6 @@
 <script>
 seajs.use("page/punishList", function(Page) {
     var page = new Page();
-    page.init();
 })
 </script>
 <%- include footer %>

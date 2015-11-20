@@ -1,41 +1,47 @@
 define('page/punishList', [], function(require) {
     function Page() {
         this.title = '';
+        this.init();
     }
     Page.prototype = {
         init: function() {
             this.initEvent();
         },
         initEvent: function() {
-            var ids = [];
+            $('.J_CheckAll').on('click', function(event) {
+                $('.J_CheckBox').prop('checked', $(this).prop('checked'));
+            });
             $('.J_BatchUpload').on('click', function(event) {
-                $('.J_CheckBox:checked').each(function(index, el) {
-                    ids.push($(el).val());
-                });
-                $.ajax({
-                    url: 'punishList/batchRPC',
-                    type: 'post',
-                    dataType: 'json',
-                    data: {
-                        'ids': ids.join(',')
-                    },
-                    success: function(data) {
-                        var errIds = [];
-                        for (var i in data) {
-                            if (!data[i].success) {
-                                errIds.push(data[i].id);
+                if (confirm('确认批量上传吗?')) {
+                    var ids = [];
+                    $('.J_CheckBox:checked').each(function(index, el) {
+                        ids.push($(el).val());
+                    });
+                    $.ajax({
+                        url: 'punishList/batchRPC',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                            'ids': ids.join(',')
+                        },
+                        success: function(data) {
+                            var errIds = [];
+                            for (var i in data) {
+                                if (!data[i].success) {
+                                    errIds.push(data[i].id);
+                                }
                             }
+                            if (errIds.length == 0) {
+                                alert('上传成功');
+                            } else {
+                                alert('上传失败ID: ' + errIds.join(','));
+                            }
+                        },
+                        error: function() {
+                            alert('上传失败');
                         }
-                        if (errIds.length = 0) {
-                            alert('上传成功');
-                        } else {
-                            alert('上传失败ID: ' + errIds.join[',']);
-                        }
-                    },
-                    error: function() {
-                        alert('上传失败');
-                    }
-                })
+                    })
+                }
             });
             $('.J_ManualUpload').on('click', function(event) {
                 window.location = './punishAdd';

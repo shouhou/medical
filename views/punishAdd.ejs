@@ -1,139 +1,138 @@
 <%- include header %>
-<div class="title">
-    重大问题决策接口</div>
-<form action="/punishAdd/form" method="get">
-    <div class="row">
-        <div class="span2 label">申请人：</div>
-        <div class="span8">
-            <input type="text" class='input-normal'>
+    <div class="title">
+        重大问题决策接口</div>
+    <form action="/punishAdd/form" method="post" class='J_From'>
+        <div class="row">
+            <div class="span2 label">申报表编号：</div>
+            <div class="span8">
+                <input type="text" class="time" name='event_id' placeholder='申报表编号'>
+            </div>
+            <div class="span2 label">流程号：</div>
+            <div class="span8">
+                <input type="text" class='input-normal' name='procedured_detail_id'>
+            </div>
         </div>
-        <div class="span2 label">申请时间：</div>
-        <div class="span4">
-            <input type="text" class="time" name='event_date_time'>
+        <div class="row">
+            <div class="span2 label">申请人：</div>
+            <div class="span8">
+                <input type="text" class='input-normal'>
+            </div>
+            <div class="span2 label">申请时间：</div>
+            <div class="span4">
+                <input type="text" class="time J_Data" name='event_date_time'>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="span2 label">申请科室：</div>
-        <div class="span8">
-            <input type="text" class="input-big">
+        <div class="row">
+            <div class="span2 label">申请科室：</div>
+            <div class="span8">
+                <input type="text" class="input-big">
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="span2 label">议题名称：</div>
-        <div class="span8">
-            <input type="text" class="input-big" name='event_name'>
+        <div class="row">
+            <div class="span2 label">议题名称：</div>
+            <div class="span8">
+                <input type="text" class="input-big" name='event_name'>
+            </div>
         </div>
-    </div>
-    <div class="row row-big">
-        <div class="span2 label">申请说明：</div>
-        <div class="span8">
-            <textarea name="" class="input-area"></textarea>
+        <div class="row row-big">
+            <div class="span2 label">申请说明：</div>
+            <div class="span8">
+                <textarea name="" class="input-area"></textarea>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="span2 label">项目类别：</div>
-        <div class="span8">
-            <select name="" class="select-normal">
-                <option value="1">B、一般事项决策</option>
-                <option value="1">B、一般事项决策</option>
-                <option value="1">B、一般事项决策</option>
-            </select>
+        <div class="row">
+            <div class="span2 label">项目类别：</div>
+            <div class="span8">
+                <select name="" class="select-normal">
+                    <option value="B">B、一般事项决策</option>
+                </select>
+            </div>
         </div>
-        <div class="span2 label">流入流程：</div>
-        <div class="span8">
-            <select name="" class="select-normal">
-                <option value="1" selected>是</option>
-                <option value="2">否</option>
-            </select>
+        <div class="row row-big">
+            <div class="span2 label">分管领导意见</div>
+            <div class="span8">
+                <textarea name="" class="input-area" placeholder="分管领导意见"></textarea>
+            </div>
+            <div class="span2 label">签名：</div>
+            <div class="span4">
+                <input type="text" class="input-normal">
+            </div>
+            <div class="span2 label">时间：</div>
+            <div class="span4">
+                <input type="text" class="time J_Data">
+            </div>
         </div>
-    </div>
-    <div class="row row-big">
-        <div class="span2 label">分管领导意见</div>
-        <div class="span8">
-            <textarea name="" class="input-area" placeholder="分管领导意见"></textarea>
+        <div class="row">
+            <div class="span2 label">决策类型：</div>
+            <div class="span8">
+                <select name="decision_type" class="select-normal">
+                    <% dict_juece.forEach(function(json){ %>
+                    <option value="<%=json.key%>"><%=json.key%>-<%=json.value%></option>
+                    <% })%>
+                </select>
+            </div>
         </div>
-        <div class="span2 label">签名：</div>
-        <div class="span4">
-            <input type="text" class="input-normal">
+        <div class="row row-big">
+            <div class="span2 label">党委会/党政联席会会议决议(决策结果内容)</div>
+            <div class="span8">
+                <textarea name="decision_result" class="input-area" placeholder="党委会/党政联席会会议决议(决策结果内容)"></textarea>
+            </div>
+            <div class="span2 label">决策时间：</div>
+            <div class="span4">
+                <input type="text" class="time J_Data" name='decision_date_time'>
+            </div>
         </div>
-        <div class="span2 label">时间：</div>
-        <div class="span4">
-            <input type="text" class="time">
+        <div class="row row-big">
+            <div class="span2 label">书记/院长签署审批意见</div>
+            <div class="span8">
+                <textarea name="" class="input-area" placeholder="书记/院长签署审批意见"></textarea>
+            </div>
+            <div class="span2 label">签名：</div>
+            <div class="span4">
+                <input type="text" class="input-normal">
+            </div>
+            <div class="span2 label">时间：</div>
+            <div class="span4">
+                <input type="text" class="time J_Data">
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="span2 label">决策类型：</div>
-        <div class="span8">
-            <select name="decision_type" class="select-normal">
-                <option value="1">4、党政联席会</option>
-                <option value="1">4、党政联席会</option>
-                <option value="1">4、党政联席会</option>
-            </select>
+        <div class="row row-big">
+            <div class="span2 label">院务公开：</div>
+            <div class="span8">
+                <textarea name="" class="input-area"></textarea>
+            </div>
+            <div class="span2 label">公开时间：</div>
+            <div class="span4">
+                <input type="text" class="time J_Data">
+            </div>
         </div>
-    </div>
-    <div class="row row-big">
-        <div class="span2 label">党委会/党政联席会会议决议(决策结果内容)</div>
-        <div class="span8">
-            <textarea name="decision_result" class="input-area" placeholder="党委会/党政联席会会议决议(决策结果内容)"></textarea>
+        <div class="row row-big">
+            <div class="span2 label">院办公室备案：</div>
+            <div class="span8">
+                备案状态：
+                <select name="" class="select-normal">
+                    <option value="1">已经备案</option>
+                </select>
+            </div>
+            <div class="span2 label">时间：</div>
+            <div class="span4">
+                <input type="text" class="time J_Data">
+            </div>
         </div>
-        <div class="span2 label">签名：</div>
-        <div class="span4">
-            <input type="text" class="input-normal">
+        <div class="row">
+            <div class="span2 label">&nbsp;</div>
+            <div class="span2">
+                <input type="button" value="提交" class="button-normal J_Submit">
+            </div>
+            <div class="span2 label">&nbsp;</div>
+            <div class="span2">
+                <input type="button" value="返回" class="button-normal J_Return">
+            </div>
         </div>
-        <div class="span2 label">时间：</div>
-        <div class="span4">
-            <input type="text" class="time">
-        </div>
-    </div>
-    <div class="row row-big">
-        <div class="span2 label">书记/院长签署审批意见</div>
-        <div class="span8">
-            <textarea name="" class="input-area" placeholder="书记/院长签署审批意见"></textarea>
-        </div>
-        <div class="span2 label">签名：</div>
-        <div class="span4">
-            <input type="text" class="input-normal">
-        </div>
-        <div class="span2 label">时间：</div>
-        <div class="span4">
-            <input type="text" class="time">
-        </div>
-    </div>
-    <div class="row row-big">
-        <div class="span2 label">院务公开：</div>
-        <div class="span8">
-            <textarea name="" class="input-area"></textarea>
-        </div>
-        <div class="span2 label">公开时间：</div>
-        <div class="span4">
-            <input type="text" class="time">
-        </div>
-    </div>
-    <div class="row row-big">
-        <div class="span2 label">院办公室备案：</div>
-        <div class="span8">
-            备案状态：
-            <select name="" class="select-normal">
-                <option value="1">已经备案</option>
-                <option value="1">已经备案</option>
-                <option value="1">已经备案</option>
-            </select>
-        </div>
-        <div class="span2 label">时间：</div>
-        <div class="span4">
-            <input type="text" class="time">
-        </div>
-    </div>
-    <div class="row">
-        <div class="span2 label">&nbsp;</div>
-        <div class="span8">
-            <input type="submit" value="提交" class="button-normal">
-        </div>
-    </div>
-</form>
-<script>
-seajs.use("common/dict", function(dict) {
-    console.log(dict.DIC_JUECE);
-})
-</script>
-<%- include footer %>
+    </form>
+    <script>
+    seajs.use("page/punishAdd", function(Page) {
+        var page = new Page();
+    })
+    </script>
+    <%- include footer %>

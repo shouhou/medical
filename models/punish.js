@@ -1,4 +1,6 @@
 var _ = require('underscore');
+var fs = require('fs');
+
 var conn = require('./common/conn');
 var util = require('./common/util');
 var log = require('./common/log').log;
@@ -16,7 +18,6 @@ var json = {
 };
 
 var data = {
-    id: 3,
     event_id: '',
     event_name: ' 关于全院范围内推广运行OA系统的申请',
     event_date_time: '2015-09-01 10:00:00',
@@ -27,7 +28,7 @@ var data = {
     procedured_date_time: '2015-09-01 10:00:00'
 }
 
-var reqJSON = {
+/*var reqJSON = {
     "Request": {
         "Head": {
             "Function": " MAJOR_PUNISH ",
@@ -57,12 +58,16 @@ var reqJSON = {
             }
         }
     }
-}
+}*/
 
+var event_num = 1;
 module.exports = {
     getPunishById: function(id, callback) {
         conn.query('select ' + util.querySql(json) + ' from flow_data_113 where id = ?', [id], function(rows, fields) {
-            callback(rows[0]);
+            var data = rows[0];
+
+
+            callback(data);
         });
     },
     getAllPunish: function(callback) {
@@ -70,22 +75,23 @@ module.exports = {
             callback(rows);
         });
     },
-    getJSON: function(data) {
+    getOut: function(data, callback) {
         data.unit_code = '4509020020';
         data.unit_name = '玉林市第二人民医院';
         data.org_code = '49936034-6';
-        data.event_num = 1;
+        data.event_num = event_num++;
         data.procedure = 1;
+        data.procedured_date_time = data.event_date_time;
 
-        var tpl = JSON.stringify(reqJSON);
-        var out = _.template(tpl)(data);
-        var json = {};
-        try {
-            json = JSON.parse(out);
-        } catch (e) {
-            log('NB-JSON解析错误',out);
-            throw(e);
-        }
-        return json;
+        log('DT-准备发送数据：', data);
+        fs.readFile("./models/tpl/punish.tpl", 'utf-8', function(error, tpl) {
+            if (error) {
+                log('FS-读取模板错误');
+                throw error;
+            } else {
+                var out = _.template(tpl)(data);
+                callback(out);
+            }
+        });
     }
 };
