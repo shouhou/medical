@@ -11,8 +11,12 @@ var options = {
     host: '127.0.0.1',
     port: 8888,
     method: 'POST',
-    // path: 'https://59.211.16.98:4439/BasWebService.asmx?wsdl', //url
-    path: 'https://shouhou91.eicp.net:26402/BasWebService.asmx?wsdl', //url
+    // path: 'https://shouhou91.eicp.net:26402/BasWebService.asmx?wsdl',
+    path: 'https://59.211.16.98:4439/BasWebService.asmx?wsdl',
+
+    // hostname:'shouhou91.eicp.net',
+    // port:26402,
+    // path:'/BasWebService.asmx?wsdl',
     headers: {
         // 'Content-Type': 'text/xml; charset=utf-8',
         // 'Content-Length': Buffer.byteLength(data),
