@@ -1,0 +1,49 @@
+<%- include header %>
+<link rel='stylesheet' href='/lib/jquery.simple-dtpicker.css' />
+<script src="/lib/jquery.simple-dtpicker.js"></script>
+<div class="title">
+    医院药品相关药品指标接口</div>
+<form action="/indexDrugAdd/form" method="post" class='J_From'>
+    <div class="row">
+        <div class="span2 label">药占比</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='rat_drug' placeholder='药占比'>
+        </div>
+        <div class="span2 label">DDD值</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='ddd' placeholder='DDD值'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2 label">基药比</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='rat_zdrug' placeholder='基药比'>
+        </div>
+        <div class="span2 label">抗生素使用率</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='rat_adrug' placeholder='抗生素使用率'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2 label">所属年月：</div>
+        <div class="span8">
+            <input type="text" class='time J_Data' name='form_date'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2 label">&nbsp;</div>
+        <div class="span2">
+            <input type="button" value="提交" class="button-normal J_Submit">
+        </div>
+        <div class="span2 label">&nbsp;</div>
+        <div class="span2">
+            <input type="button" value="返回" class="button-normal J_Return">
+        </div>
+    </div>
+</form>
+<script>
+seajs.use("page/indexDrugAdd", function(Page) {
+    var page = new Page();
+})
+</script>
+<%- include footer %>

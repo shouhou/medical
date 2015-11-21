@@ -1,0 +1,147 @@
+<%- include header %>
+    <link rel='stylesheet' href='/lib/jquery.simple-dtpicker.css' />
+    <script src="/lib/jquery.simple-dtpicker.js"></script>
+    <div class="title">
+        重要干部任免接口</div>
+    <form action="/issuesAdd/form" method="post" class='J_From'>
+        <div class="row">
+            <div class="span2 label">重要干部任用文件编号：</div>
+            <div class="span8">
+                <input type="text" name='event_id' placeholder='重要干部任用文件编号' class="input-normal">
+            </div>
+            <div class="span2 label">重要干部任用文件名称：</div>
+            <div class="span8">
+                <input type="text" name='event_name' placeholder='重要干部任用文件名称' class="input-normal">
+            </div>
+        </div>
+        <div class="row">
+            <div class="span2 label">人事科提案时间</div>
+            <div class="span8">
+                <input type="text" class='time J_Data' name='event_date_time' placeholder='人事科提案时间'>
+            </div>
+            <div class="span2 label">流程号：</div>
+            <div class="span8">
+                <input type="text" class='input-normal' name='procedured_detail_id'>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span2 label">干部推荐方式：</div>
+            <div class="span8">
+                <select name="recommen_type" class="select-normal">
+                    <% dic_tuijian.forEach(function(json){ %>
+                        <option value="<%=json.key%>">
+                            <%=json.key%>-<%=json.value%>
+                        </option>
+                        <% })%>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span2 label">竞聘结果/投票结果：</div>
+            <div class="span8">
+                <input type="text" class='input-normal' placeholder='竞聘结果/投票结果'>
+            </div>
+            <div class="span2 label">时间：</div>
+            <div class="span4">
+                <input type="text" class="time J_Data" name=''>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span2 label">决策类型：</div>
+            <div class="span8">
+                <select name="decision_type" class="select-normal">
+                    <% dict_juece.forEach(function(json){ %>
+                        <option value="<%=json.key%>">
+                            <%=json.key%>-
+                                <%=json.value%>
+                        </option>
+                        <% })%>
+                </select>
+            </div>
+        </div>
+        <div class="row row-big">
+            <div class="span2 label">党委会/党政联席会会议决议(决策结果内容)</div>
+            <div class="span8">
+                <textarea name="decision_result" class="input-area" placeholder="党委会/党政联席会会议决议(决策结果内容)"></textarea>
+            </div>
+            <div class="span2 label">决策时间：</div>
+            <div class="span4">
+                <input type="text" class="time J_Data" name='decision_date_time'>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span2 label">书记/院长签署：</div>
+            <div class="span8">
+                <input type="text" class='input-normal' placeholder='书记/院长签署'>
+            </div>
+            <div class="span2 label">签名：</div>
+            <div class="span4">
+                <input type="text" class='input-normal' name=''>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span2 label">审批意见：</div>
+            <div class="span8">
+                <input type="text" class='input-normal' placeholder='审批意见'>
+            </div>
+            <div class="span2 label">签署时间：</div>
+            <div class="span4">
+                <input type="text" class="time J_Data" name=''>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span2 label">公式类型：</div>
+            <div class="span8">
+                <select name="public_type" class="select-normal">
+                    <% dic_gongshi.forEach(function(json){ %>
+                        <option value="<%=json.key%>">
+                            <%=json.key%>-
+                                <%=json.value%>
+                        </option>
+                        <% })%>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span2 label">公示文件：</div>
+            <div class="span8">
+                <input type="text" class='input-normal' placeholder='公示文件'>
+            </div>
+            <div class="span2 label">公示时间：</div>
+            <div class="span4">
+                <input type="text" class="time J_Data" name='public_dtae_time'>
+            </div>
+        </div>
+        <div class="row row-big">
+            <div class="span2 label">公示结果：</div>
+            <div class="span8">
+                <textarea name="public_result" class="input-area"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span2 label">签发任用文件：</div>
+            <div class="span8">
+                <input type="text" class='input-normal' placeholder='公式文件'>
+            </div>
+            <div class="span2 label">任用时间：</div>
+            <div class="span4">
+                <input type="text" class="time J_Data" name=''>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span2 label">&nbsp;</div>
+            <div class="span2">
+                <input type="button" value="提交" class="button-normal J_Submit">
+            </div>
+            <div class="span2 label">&nbsp;</div>
+            <div class="span2">
+                <input type="button" value="返回" class="button-normal J_Return">
+            </div>
+        </div>
+    </form>
+    <script>
+    seajs.use("page/issuesAdd", function(Page) {
+        var page = new Page();
+    })
+    </script>
+    <%- include footer %>

@@ -1,0 +1,66 @@
+<%- include header %>
+<link rel='stylesheet' href='/lib/jquery.simple-dtpicker.css' />
+<script src="/lib/jquery.simple-dtpicker.js"></script>
+<div class="title">
+    医院满意度接口</div>
+<form action="/satisfactionAdd/form" method="post" class='J_From'>
+    <div class="row">
+        <div class="span2 label">患者就诊号或者住院号</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='patient_code' placeholder='患者就诊号或者住院号'>
+        </div>
+        <div class="span2 label">就诊序号患者住院流水号</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='visit_no' placeholder='就诊序号患者住院流水号'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2 label">满意类型：</div>
+        <div class="span8">
+            <select name="satisfaction" class="select-normal">
+                <option value="1">1-满意</option>
+                <option value="2">2-基本满意</option>
+                <option value="3">3-不满意</option>
+            </select>
+        </div>
+        <div class="span2 label">满意环节(内容)：</div>
+        <div class="span8">
+            <textarea name="satisfaction_content" class="input-area" placeholder='满意环节(内容)'></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2 label">就诊时间：</div>
+        <div class="span8">
+            <input type="text" class='time J_Data' name='visit_date_time'>
+        </div>
+        <div class="span2 label">填写时间：</div>
+        <div class="span8">
+            <input type="text" class='time J_Data' name='record_date_time'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2 label">决策类型：</div>
+        <div class="span8">
+            <select name="visit_type" class="select-normal">
+                <option value="1">1-门诊</option>
+                <option value="2">2-住院</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2 label">&nbsp;</div>
+        <div class="span2">
+            <input type="button" value="提交" class="button-normal J_Submit">
+        </div>
+        <div class="span2 label">&nbsp;</div>
+        <div class="span2">
+            <input type="button" value="返回" class="button-normal J_Return">
+        </div>
+    </div>
+</form>
+<script>
+seajs.use("page/satisfactionAdd", function(Page) {
+    var page = new Page();
+})
+</script>
+<%- include footer %>

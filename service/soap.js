@@ -37,6 +37,10 @@ function fetchReq(options, type, data, callback) {
         if (chunks.length == 0) {
             req.abort();
             log('WS-请求发出超时');
+            callback({
+                'success': false,
+                'message': 'WS-请求发出超时'
+            });
         }
     }, 5000);
 
@@ -54,13 +58,20 @@ function fetchReq(options, type, data, callback) {
             //chunks.push(chunk);
         });
         res.on('end', function() { //Buffer.concat(chunks) 乱码
-            callback(chunks)
+            callback({
+                'success': true,
+                'data': chunks
+            })
         });
 
         var resTimer = setTimeout(function() {
             if (chunks.length == 0) {
                 res.destroy();
                 log('WS-请求响应超时');
+                callback({ //非常重要，注意返回
+                    'success': false,
+                    'message': 'WS-请求响应超时'
+                });
             }
         }, 10000); //10秒超时
     });
@@ -76,7 +87,6 @@ function parseRes(res, type) {
         'success': data.indexOf('成功') > 0 ? true : false,
         'message': data
     };
-    console.log(rtn);
     return rtn;
 }
 
@@ -105,9 +115,13 @@ module.exports = {
 
         log('WS-发送报文: ', data);
         fetchReq(options, 'utf-8', data, function(res) {
-            log('WS-接收报文: ', res);
-            var rtn = parseRes(res, 'PunishDataUploadResult');
-            callback(rtn);
+            if (res.success) {
+                log('WS-接收报文: ', res.data);
+                var rtn = parseRes(res.data, 'PunishDataUploadResult');
+                callback(rtn);
+            }else{
+                callback(res);
+            }
         });
     }
 }

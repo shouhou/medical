@@ -1,0 +1,69 @@
+<%- include header %>
+<link rel='stylesheet' href='/lib/jquery.simple-dtpicker.css' />
+<script src="/lib/jquery.simple-dtpicker.js"></script>
+<div class="title">
+    医院药品相关药品指标接口</div>
+<form action="/indexDrugAdd/form" method="post" class='J_From'>
+    <div class="row">
+        <div class="span2 label">项目名称</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='item_name' placeholder='项目名称'>
+        </div>
+        <div class="span2 label">项目编号</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='item_code' placeholder='项目编号'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2 label">金额</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='amount' placeholder='金额'>
+        </div>
+        <div class="span2 label">数量</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='num' placeholder='数量'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2 label">科室</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='dept' placeholder='科室'>
+        </div>
+        <div class="span2 label">医生</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='doctor' placeholder='医生'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2 label">所属年月：</div>
+        <div class="span8">
+            <input type="text" class='time J_Data' name='form_date'>
+        </div>
+        <div class="span2 label">参考标准</div>
+        <div class="span8">
+            <input type="text" class="input-normal" name='standard' placeholder='参考标准'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2 label">创建时间：</div>
+        <div class="span8">
+            <input type="text" class='time J_Data' name='create_date_time'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span2 label">&nbsp;</div>
+        <div class="span2">
+            <input type="button" value="提交" class="button-normal J_Submit">
+        </div>
+        <div class="span2 label">&nbsp;</div>
+        <div class="span2">
+            <input type="button" value="返回" class="button-normal J_Return">
+        </div>
+    </div>
+</form>
+<script>
+seajs.use("page/indexExamAdd", function(Page) {
+    var page = new Page();
+})
+</script>
+<%- include footer %>
