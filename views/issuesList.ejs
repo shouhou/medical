@@ -1,0 +1,56 @@
+<%- include header %>
+<div class="title">
+    重要干部任免接口</div>
+<table class="table">
+    <tr>
+        <th>
+            <input type="checkbox" class='J_CheckAll'>全选
+        </th>
+        <th>事件ID</th>
+        <th>事件名称</th>
+        <th>申请时间</th>
+        <th>决策类型</th>
+        <th>决策时间</th>
+        <th>操作</th>
+    </tr>
+    <% data.forEach(function(issues){ %>
+        <tr>
+            <td>
+                <input type="checkbox" class='J_CheckBox' value='<%= issues.id %>'>
+            </td>
+            <td>
+                <%= issues.event_id %>
+            </td>
+            <td>
+                <%= issues.event_name %>
+            </td>
+            <td>
+                <%= issues.event_date_time %>
+            </td>
+            <td>
+                <%= issues.decision_type %>
+            </td>
+            <td>
+                <%= issues.decision_date_time %>
+            </td>
+            <td>
+                <input type="button" class='tb-button J_Upload' value="上传">
+            </td>
+        </tr>
+        <% }) %>
+</table>
+<div class="row">
+    <div class="span1 label">&nbsp;</div>
+    <div class="span3">
+        <input type="submit" value="手动上传" class="button-normal J_ManualUpload">
+    </div>
+    <div class="span3">
+        <input type="submit" value="批量上传" class="button-normal J_BatchUpload">
+    </div>
+</div>
+<script>
+seajs.use("page/issuesList", function(Page) {
+    var page = new Page();
+})
+</script>
+<%- include footer %>

@@ -1,0 +1,67 @@
+<%- include header %>
+<div class="title">
+    医院大型检查接口</div>
+<table class="table">
+    <tr>
+        <th>
+            <input type="checkbox" class='J_CheckAll'>全选
+        </th>
+        <th>项目名称</th>
+        <th>项目编号</th>
+        <th>金额</th>
+        <th>数量</th>
+        <th>科室</th>
+        <th>主任</th>
+        <th>所属年月</th>
+        <th>参考标准</th>
+    </tr>
+    <% data.forEach(function(indexExam){ %>
+        <tr>
+            <td>
+                <input type="checkbox" class='J_CheckBox' value='<%= indexExam.id %>'>
+            </td>
+            <td>
+                <%= indexExam.item_name %>
+            </td>
+            <td>
+                <%= indexExam.item_code %>
+            </td>
+            <td>
+                <%= indexExam.amount %>
+            </td>
+            <td>
+                <%= indexExam.num %>
+            </td>
+            <td>
+                <%= indexExam.dept %>
+            </td>
+            <td>
+                <%= indexExam.doctor %>
+            </td>
+            <td>
+                <%= indexExam.form_date %>
+            </td>
+            <td>
+                <%= indexExam.standard %>
+            </td>
+            <td>
+                <input type="button" class='tb-button J_Upload' value="上传">
+            </td>
+        </tr>
+        <% }) %>
+</table>
+<div class="row">
+    <div class="span1 label">&nbsp;</div>
+    <div class="span3">
+        <input type="submit" value="手动上传" class="button-normal J_ManualUpload">
+    </div>
+    <div class="span3">
+        <input type="submit" value="批量上传" class="button-normal J_BatchUpload">
+    </div>
+</div>
+<script>
+seajs.use("page/indexExamList", function(Page) {
+    var page = new Page();
+})
+</script>
+<%- include footer %>

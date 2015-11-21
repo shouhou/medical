@@ -1,0 +1,55 @@
+<%- include header %>
+<div class="title">
+    医院药品相关药品指标接口</div>
+<table class="table">
+    <tr>
+        <th>
+            <input type="checkbox" class='J_CheckAll'>全选
+        </th>
+        <th>药占比</th>
+        <th>DDD值</th>
+        <th>基药比</th>
+        <th>抗生素使用率</th>
+        <th>所属年月</th>
+    </tr>
+    <% data.forEach(function(indexDrug){ %>
+        <tr>
+            <td>
+                <input type="checkbox" class='J_CheckBox' value='<%= indexDrug.id %>'>
+            </td>
+            <td>
+                <%= indexDrug.rat_drug %>
+            </td>
+            <td>
+                <%= indexDrug.ddd %>
+            </td>
+            <td>
+                <%= indexDrug.rat_zdrug %>
+            </td>
+            <td>
+                <%= indexDrug.rat_adrug %>
+            </td>
+            <td>
+                <%= indexDrug.form_date %>
+            </td>
+            <td>
+                <input type="button" class='tb-button J_Upload' value="上传">
+            </td>
+        </tr>
+        <% }) %>
+</table>
+<div class="row">
+    <div class="span1 label">&nbsp;</div>
+    <div class="span3">
+        <input type="submit" value="手动上传" class="button-normal J_ManualUpload">
+    </div>
+    <div class="span3">
+        <input type="submit" value="批量上传" class="button-normal J_BatchUpload">
+    </div>
+</div>
+<script>
+seajs.use("page/indexDrugList", function(Page) {
+    var page = new Page();
+})
+</script>
+<%- include footer %>
