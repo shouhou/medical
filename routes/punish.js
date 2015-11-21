@@ -7,8 +7,15 @@ var express = require('express'),
 var punish = require('../models/punish'),
     dict = require('../models/common/dict'),
     log = require('../models/common/log').log,
-    util =require('../models/common/util'),
+    util = require('../models/common/util'),
     soap = require('../service/soap');
+
+router.get('/', function(req, res) {
+    res.writeHead(302, {
+        'Location': '/punish/punishList'
+    });
+    res.end();
+});
 
 router.get('/punishList', function(req, res) {
     punish.getAllPunish(function(data) {
