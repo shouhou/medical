@@ -10,7 +10,7 @@ var json = {
     'event_id': 'data_41',
     'event_name': 'data_11',
     'event_date_time': 'data_7',
-    'decision_type': 'data_18',
+    'decision_type': 'substring(data_18,1,1)',
     'decision_date_time': 'data_17',
     'decision_result': 'data_19',
     'procedured_detail_id': 'run_id',

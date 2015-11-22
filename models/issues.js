@@ -10,14 +10,14 @@ var json = {
     'event_id': 'data_20',
     'event_name': 'data_1',
     'event_date_time': 'data_2',
-    'decision_type': 'data_4',
+    'decision_type': 'substring(data_4,1,1)',
     'decision_date_time': 'data_7',
     'decision_result': 'data_12',
     'procedured_detail_id': 'run_id',
-    'public_type': 'data_11',
+    'public_type': 'substring(data_11,1,1)',
     'public_dtae_time': 'data_9',
     'public_result': 'data_17',
-    'recommen_type': 'data_3',
+    'recommen_type': 'substring(data_3,1,1)'
 };
 
 var event_num = 1;

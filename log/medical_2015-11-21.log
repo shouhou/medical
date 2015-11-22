@@ -1,2 +1,39 @@
 ﻿2015-11-21 22:42:33 DB-数据库连接异常
 2015-11-21 22:42:38 DB-数据库连接异常
+2015-11-21 22:49:02 DB-执行SQL: select id as id ,data_41 as event_id ,data_11 as event_name ,data_7 as event_date_time ,data_18 as decision_type ,data_17 as decision_date_time ,data_19 as decision_result ,run_id as procedured_detail_id ,data_7 as procedured_date_time  from flow_data_113
+2015-11-21 22:49:17 DB-执行SQL: select id as id ,data_41 as event_id ,data_11 as event_name ,data_7 as event_date_time ,data_18 as decision_type ,data_17 as decision_date_time ,data_19 as decision_result ,run_id as procedured_detail_id ,data_7 as procedured_date_time  from flow_data_113 where id = ?
+2015-11-21 22:49:17 参数: [4]
+2015-11-21 22:49:17 DT-准备发送数据：[object Object]
+2015-11-21 22:49:17 WS-发送报文: <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"><soap12:Header><MySoapHeader xmlns="http://www.gxws.gov.cn/"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns="http://www.gxws.gov.cn/"><xml> <![CDATA[<Request>
+    <Head>
+        <Function> MAJOR_PUNISH </Function>
+        <Operation>0</Operation>
+    </Head>
+    <Body>
+        <MAJOR_PUNISH>
+            <MAIN>
+                <UNIT_CODE>4509020020</UNIT_CODE>
+                <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>
+                <EVENT_NUM>1</EVENT_NUM>
+                <ORG_CODE>49936034-6</ORG_CODE>
+                <EVENT_ID>01201501</EVENT_ID>
+                <EVENT_NAME>关于全院范围内推广运行OA系统的申请</EVENT_NAME>
+                <PROCEDURE>1</PROCEDURE>
+                <EVENT_DATE_TIME>2015-03-01 10:00:00</EVENT_DATE_TIME>
+            </MAIN>
+            <DETAIL>
+                <UNIT_CODE>4509020020</UNIT_CODE>
+                <PROCEDURED_DETAIL_ID>61</PROCEDURED_DETAIL_ID>
+                <EVENT_ID>01201501</EVENT_ID>
+                <PROCEDURED_DATE_TIME>2015-03-01 10:00:00</PROCEDURED_DATE_TIME>
+                <DECISION_TYPE>4党政联席会</DECISION_TYPE>
+                <DECISION_DATE_TIME>2015-03-01 10:00:00</DECISION_DATE_TIME>
+                <DECISION_RESULT>党委会/党政联席会会议决议
+（决策结果内容）	经讨论决定，全院推广使用OA系统，组织加强培训，实现无纸化办公。 
+ 
+</DECISION_RESULT>
+            </DETAIL>
+        </MAJOR_PUNISH>
+    </Body>
+</Request>]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>
+2015-11-21 22:49:22 WS-请求发出超时
