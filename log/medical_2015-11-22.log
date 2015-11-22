@@ -1,0 +1,1015 @@
+
+2015-11-22 14:56:44 DB-执行SQL: select id as id ,data_32 as event_id ,data_3 as event_name ,data_19 as event_date_time ,run_id as procedured_detail_id ,substring(data_28,1,1) as decision_type ,data_21 as decision_date_time ,data_14 as decision_result ,substring(data_29,1,1) as public_type ,data_27 as public_dtae_time ,data_16 as public_result ,substring(data_30,1,1) as tender_type ,data_23 as tender_date_time ,substring(data_31,1,1) as check_type ,data_24 as check_dtae_time ,data_17 as check_result  from flow_data_116
+
+2015-11-22 14:58:03 DT-准备发送数据：[object Object]
+
+2015-11-22 14:58:03 WS-发送报文: <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"><soap12:Header><MySoapHeader xmlns="http://www.gxws.gov.cn/"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns="http://www.gxws.gov.cn/"><xml> <![CDATA[<Request>
+    <Head>
+        <Function>TB_INDEX_EXAM</Function>
+        <Operation>0</Operation>
+    </Head>
+    <Body>
+        <TB_INDEX_EXAM>
+            <UNIT_CODE>4509020020</UNIT_CODE>
+            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>
+            <ITEM_NAME></ITEM_NAME>
+            <ITEM_CODE></ITEM_CODE>
+            <AMOUNT>312</AMOUNT>
+            <NUM></NUM>
+            <DEPT></DEPT>
+            <DOCTOR></DOCTOR>
+            <FORM_DATE></FORM_DATE>
+            <CREATE_DATE_TIME></CREATE_DATE_TIME>
+            <STANDARD></STANDARD>
+        </TB_INDEX_EXAM>
+    </Body>
+</Request>
+]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>
+
+2015-11-22 14:58:05 WS-接收报文: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><PunishDataUploadResponse xmlns="http://www.gxws.gov.cn/"><PunishDataUploadResult>ORA-01400: 无法将 NULL 插入 ("PUNISHMENT"."TB_INDEX_EXAM"."ITEM_NAME")</PunishDataUploadResult></PunishDataUploadResponse></soap:Body></soap:Envelope>
+
+2015-11-22 14:59:31 DT-准备发送数据：[object Object]
+
+2015-11-22 14:59:31 WS-发送报文: <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"><soap12:Header><MySoapHeader xmlns="http://www.gxws.gov.cn/"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns="http://www.gxws.gov.cn/"><xml> <![CDATA[<Request>
+    <Head>
+        <Function>TB_TOP_MATERIAL</Function>
+        <Operation>0</Operation>
+    </Head>
+    <Body>
+        <TB_TOP_MATERIAL>
+            <UNIT_CODE>4509020020</UNIT_CODE>
+            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>
+            <MAT_NAME></MAT_NAME>
+            <MAT_CODE></MAT_CODE>
+            <SPECS></SPECS>
+            <COMPANY></COMPANY>
+            <AMOUNT>312.00</AMOUNT>
+            <NUM></NUM>
+            <DEPT></DEPT>
+            <DOCTOR></DOCTOR>
+            <FORM_DATE></FORM_DATE>
+        </TB_TOP_MATERIAL>
+    </Body>
+</Request>
+]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>
+
+2015-11-22 14:59:33 WS-接收报文: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><PunishDataUploadResponse xmlns="http://www.gxws.gov.cn/"><PunishDataUploadResult>ORA-01400: 无法将 NULL 插入 ("PUNISHMENT"."TB_TOP_MATERIAL"."MAT_NAME")</PunishDataUploadResult></PunishDataUploadResponse></soap:Body></soap:Envelope>
+
+2015-11-22 14:59:51 DT-准备发送数据：[object Object]
+
+2015-11-22 14:59:51 WS-发送报文: <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"><soap12:Header><MySoapHeader xmlns="http://www.gxws.gov.cn/"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns="http://www.gxws.gov.cn/"><xml> <![CDATA[<Request>
+    <Head>
+        <Function>TB_TOP_MATERIAL</Function>
+        <Operation>0</Operation>
+    </Head>
+    <Body>
+        <TB_TOP_MATERIAL>
+            <UNIT_CODE>4509020020</UNIT_CODE>
+            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>
+            <MAT_NAME></MAT_NAME>
+            <MAT_CODE></MAT_CODE>
+            <SPECS></SPECS>
+            <COMPANY></COMPANY>
+            <AMOUNT>312.33</AMOUNT>
+            <NUM></NUM>
+            <DEPT></DEPT>
+            <DOCTOR></DOCTOR>
+            <FORM_DATE></FORM_DATE>
+        </TB_TOP_MATERIAL>
+    </Body>
+</Request>
+]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>
+
+2015-11-22 14:59:53 WS-接收报文: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><PunishDataUploadResponse xmlns="http://www.gxws.gov.cn/"><PunishDataUploadResult>ORA-01400: 无法将 NULL 插入 ("PUNISHMENT"."TB_TOP_MATERIAL"."MAT_NAME")</PunishDataUploadResult></PunishDataUploadResponse></soap:Body></soap:Envelope>
+
+2015-11-22 15:00:38 DB-执行SQL: select id as id ,data_32 as event_id ,data_3 as event_name ,data_19 as event_date_time ,run_id as procedured_detail_id ,substring(data_28,1,1) as decision_type ,data_21 as decision_date_time ,data_14 as decision_result ,substring(data_29,1,1) as public_type ,data_27 as public_dtae_time ,data_16 as public_result ,substring(data_30,1,1) as tender_type ,data_23 as tender_date_time ,substring(data_31,1,1) as check_type ,data_24 as check_dtae_time ,data_17 as check_result  from flow_data_116
+
+2015-11-22 15:00:40 DB-执行SQL: select id as id ,data_41 as event_id ,data_11 as event_name ,data_7 as event_date_time ,substring(data_18,1,1) as decision_type ,data_17 as decision_date_time ,data_19 as decision_result ,run_id as procedured_detail_id ,data_7 as procedured_date_time  from flow_data_113
+
+2015-11-22 15:05:16 DT-准备发送数据：[object Object]
+
+2015-11-22 15:05:16 WS-发送报文: <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"><soap12:Header><MySoapHeader xmlns="http://www.gxws.gov.cn/"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns="http://www.gxws.gov.cn/"><xml> <![CDATA[<Request>
+    <Head>
+        <Function>TB_INDEX_EXAM</Function>
+        <Operation>0</Operation>
+    </Head>
+    <Body>
+        <TB_INDEX_EXAM>
+            <UNIT_CODE>4509020020</UNIT_CODE>
+            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>
+            <ITEM_NAME>132</ITEM_NAME>
+            <ITEM_CODE>13</ITEM_CODE>
+            <AMOUNT>213.00</AMOUNT>
+            <NUM>1</NUM>
+            <DEPT>1</DEPT>
+            <DOCTOR>范德萨</DOCTOR>
+            <FORM_DATE>201511</FORM_DATE>
+            <CREATE_DATE_TIME>2015-11-13 15:02:00</CREATE_DATE_TIME>
+            <STANDARD>2015-11-13 15:02:00</STANDARD>
+        </TB_INDEX_EXAM>
+    </Body>
+</Request>
+]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>
+
+2015-11-22 15:05:18 WS-接收报文: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><PunishDataUploadResponse xmlns="http://www.gxws.gov.cn/"><PunishDataUploadResult>1,成功</PunishDataUploadResult></PunishDataUploadResponse></soap:Body></soap:Envelope>
+
+2015-11-22 19:26:59 "DT-准备发送数据："{
+ "mat_name": "",
+ "mat_code": "",
+ "specs": "",
+ "company": "",
+ "amount": "NaN",
+ "num": "",
+ "dept": "",
+ "doctor": "",
+ "form_date": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 19:26:59 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME></MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS></SPECS>\r\n            <COMPANY></COMPANY>\r\n            <AMOUNT>NaN</AMOUNT>\r\n            <NUM></NUM>\r\n            <DEPT></DEPT>\r\n            <DOCTOR></DOCTOR>\r\n            <FORM_DATE></FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 19:27:03 "WS-接收报文: ""<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><PunishDataUploadResponse xmlns=\"http://www.gxws.gov.cn/\"><PunishDataUploadResult>ORA-01400: 无法将 NULL 插入 (\"PUNISHMENT\".\"TB_TOP_MATERIAL\".\"MAT_NAME\")</PunishDataUploadResult></PunishDataUploadResponse></soap:Body></soap:Envelope>"
+
+2015-11-22 19:27:06 "DT-准备发送数据："{
+ "mat_name": "",
+ "mat_code": "",
+ "specs": "",
+ "company": "",
+ "amount": "NaN",
+ "num": "",
+ "dept": "",
+ "doctor": "",
+ "form_date": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 19:27:06 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME></MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS></SPECS>\r\n            <COMPANY></COMPANY>\r\n            <AMOUNT>NaN</AMOUNT>\r\n            <NUM></NUM>\r\n            <DEPT></DEPT>\r\n            <DOCTOR></DOCTOR>\r\n            <FORM_DATE></FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 19:27:07 "WS-接收报文: ""<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><PunishDataUploadResponse xmlns=\"http://www.gxws.gov.cn/\"><PunishDataUploadResult>ORA-01400: 无法将 NULL 插入 (\"PUNISHMENT\".\"TB_TOP_MATERIAL\".\"MAT_NAME\")</PunishDataUploadResult></PunishDataUploadResponse></soap:Body></soap:Envelope>"
+
+2015-11-22 20:35:49 "DB-执行SQL: select id as id ,data_41 as event_id ,data_11 as event_name ,data_7 as event_date_time ,substring(data_18,1,1) as decision_type ,data_17 as decision_date_time ,data_19 as decision_result ,run_id as procedured_detail_id ,data_7 as procedured_date_time  from flow_data_113"
+
+2015-11-22 20:46:24 "DB-执行SQL: select id as id ,data_32 as event_id ,data_3 as event_name ,data_19 as event_date_time ,run_id as procedured_detail_id ,substring(data_28,1,1) as decision_type ,data_21 as decision_date_time ,data_14 as decision_result ,substring(data_29,1,1) as public_type ,data_27 as public_dtae_time ,data_16 as public_result ,substring(data_30,1,1) as tender_type ,data_23 as tender_date_time ,substring(data_31,1,1) as check_type ,data_24 as check_dtae_time ,data_17 as check_result  from flow_data_116"
+
+2015-11-22 20:47:09 "读取上传文件错误"
+
+2015-11-22 21:24:50 "DT-准备发送数据："{
+ "mat_name": "名",
+ "mat_code": "称",
+ "specs": "1",
+ "company": ",",
+ "amount": ",",
+ "num": "规",
+ "dept": "格",
+ "doctor": ",",
+ "form_date": "南",
+ "undefined": "6",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:24:50 "DT-准备发送数据："{
+ "mat_name": "名",
+ "mat_code": "称",
+ "specs": "2",
+ "company": ",",
+ "amount": ",",
+ "num": "规",
+ "dept": "格",
+ "doctor": ",",
+ "form_date": "南",
+ "undefined": "6",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:24:50 "DT-准备发送数据："{
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:24:50 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名</MAT_NAME>\r\n            <MAT_CODE>称</MAT_CODE>\r\n            <SPECS>1</SPECS>\r\n            <COMPANY>,</COMPANY>\r\n            <AMOUNT>,</AMOUNT>\r\n            <NUM>规</NUM>\r\n            <DEPT>格</DEPT>\r\n            <DOCTOR>,</DOCTOR>\r\n            <FORM_DATE>南</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:24:50 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名</MAT_NAME>\r\n            <MAT_CODE>称</MAT_CODE>\r\n            <SPECS>2</SPECS>\r\n            <COMPANY>,</COMPANY>\r\n            <AMOUNT>,</AMOUNT>\r\n            <NUM>规</NUM>\r\n            <DEPT>格</DEPT>\r\n            <DOCTOR>,</DOCTOR>\r\n            <FORM_DATE>南</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:24:56 "DT-准备发送数据："{
+ "mat_name": "名",
+ "mat_code": "称",
+ "specs": "1",
+ "company": ",",
+ "amount": ",",
+ "num": "规",
+ "dept": "格",
+ "doctor": ",",
+ "form_date": "南",
+ "undefined": "6",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:24:56 "DT-准备发送数据："{
+ "mat_name": "名",
+ "mat_code": "称",
+ "specs": "2",
+ "company": ",",
+ "amount": ",",
+ "num": "规",
+ "dept": "格",
+ "doctor": ",",
+ "form_date": "南",
+ "undefined": "6",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:24:56 "DT-准备发送数据："{
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:24:56 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名</MAT_NAME>\r\n            <MAT_CODE>称</MAT_CODE>\r\n            <SPECS>1</SPECS>\r\n            <COMPANY>,</COMPANY>\r\n            <AMOUNT>,</AMOUNT>\r\n            <NUM>规</NUM>\r\n            <DEPT>格</DEPT>\r\n            <DOCTOR>,</DOCTOR>\r\n            <FORM_DATE>南</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:24:57 "DT-准备发送数据："{
+ "mat_name": "名",
+ "mat_code": "称",
+ "specs": "1",
+ "company": ",",
+ "amount": ",",
+ "num": "规",
+ "dept": "格",
+ "doctor": ",",
+ "form_date": "南",
+ "undefined": "6",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:24:57 "DT-准备发送数据："{
+ "mat_name": "名",
+ "mat_code": "称",
+ "specs": "2",
+ "company": ",",
+ "amount": ",",
+ "num": "规",
+ "dept": "格",
+ "doctor": ",",
+ "form_date": "南",
+ "undefined": "6",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:24:57 "DT-准备发送数据："{
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:24:57 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名</MAT_NAME>\r\n            <MAT_CODE>称</MAT_CODE>\r\n            <SPECS>1</SPECS>\r\n            <COMPANY>,</COMPANY>\r\n            <AMOUNT>,</AMOUNT>\r\n            <NUM>规</NUM>\r\n            <DEPT>格</DEPT>\r\n            <DOCTOR>,</DOCTOR>\r\n            <FORM_DATE>南</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:24:57 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名</MAT_NAME>\r\n            <MAT_CODE>称</MAT_CODE>\r\n            <SPECS>2</SPECS>\r\n            <COMPANY>,</COMPANY>\r\n            <AMOUNT>,</AMOUNT>\r\n            <NUM>规</NUM>\r\n            <DEPT>格</DEPT>\r\n            <DOCTOR>,</DOCTOR>\r\n            <FORM_DATE>南</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:26:14 "DT-准备发送数据："{
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:26:14 "DT-准备发送数据："{
+ "mat_name": "名",
+ "mat_code": "称",
+ "specs": "1",
+ "company": ",",
+ "amount": ",",
+ "num": "规",
+ "dept": "格",
+ "doctor": ",",
+ "form_date": "南",
+ "undefined": "6",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:26:14 "DT-准备发送数据："{
+ "mat_name": "名",
+ "mat_code": "称",
+ "specs": "2",
+ "company": ",",
+ "amount": ",",
+ "num": "规",
+ "dept": "格",
+ "doctor": ",",
+ "form_date": "南",
+ "undefined": "6",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:26:14 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名</MAT_NAME>\r\n            <MAT_CODE>称</MAT_CODE>\r\n            <SPECS>1</SPECS>\r\n            <COMPANY>,</COMPANY>\r\n            <AMOUNT>,</AMOUNT>\r\n            <NUM>规</NUM>\r\n            <DEPT>格</DEPT>\r\n            <DOCTOR>,</DOCTOR>\r\n            <FORM_DATE>南</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:26:14 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名</MAT_NAME>\r\n            <MAT_CODE>称</MAT_CODE>\r\n            <SPECS>2</SPECS>\r\n            <COMPANY>,</COMPANY>\r\n            <AMOUNT>,</AMOUNT>\r\n            <NUM>规</NUM>\r\n            <DEPT>格</DEPT>\r\n            <DOCTOR>,</DOCTOR>\r\n            <FORM_DATE>南</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:26:15 "DT-准备发送数据："{
+ "mat_name": "名",
+ "mat_code": "称",
+ "specs": "1",
+ "company": ",",
+ "amount": ",",
+ "num": "规",
+ "dept": "格",
+ "doctor": ",",
+ "form_date": "南",
+ "undefined": "6",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:26:15 "DT-准备发送数据："{
+ "mat_name": "名",
+ "mat_code": "称",
+ "specs": "2",
+ "company": ",",
+ "amount": ",",
+ "num": "规",
+ "dept": "格",
+ "doctor": ",",
+ "form_date": "南",
+ "undefined": "6",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:26:15 "DT-准备发送数据："{
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:26:15 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名</MAT_NAME>\r\n            <MAT_CODE>称</MAT_CODE>\r\n            <SPECS>1</SPECS>\r\n            <COMPANY>,</COMPANY>\r\n            <AMOUNT>,</AMOUNT>\r\n            <NUM>规</NUM>\r\n            <DEPT>格</DEPT>\r\n            <DOCTOR>,</DOCTOR>\r\n            <FORM_DATE>南</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:26:15 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名</MAT_NAME>\r\n            <MAT_CODE>称</MAT_CODE>\r\n            <SPECS>2</SPECS>\r\n            <COMPANY>,</COMPANY>\r\n            <AMOUNT>,</AMOUNT>\r\n            <NUM>规</NUM>\r\n            <DEPT>格</DEPT>\r\n            <DOCTOR>,</DOCTOR>\r\n            <FORM_DATE>南</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:26:55 "批量上传返回结果:"[]
+
+2015-11-22 21:27:41 "批量上传返回结果:"[]
+
+2015-11-22 21:28:19 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:28:19 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:28:19 "DT-准备发送数据："{
+ "mat_name": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:28:19 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:28:19 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称2</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:28:20 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:28:20 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:28:20 "DT-准备发送数据："{
+ "mat_name": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:28:20 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:28:20 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称2</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:30:15 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "1",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:30:15 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "2",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:30:15 "DT-准备发送数据："{
+ "mat_name": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:30:15 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE>1</MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:30:15 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称2</MAT_NAME>\r\n            <MAT_CODE>2</MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:30:16 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "1",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:30:16 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "2",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:30:16 "DT-准备发送数据："{
+ "mat_name": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:30:16 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE>1</MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:30:16 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称2</MAT_NAME>\r\n            <MAT_CODE>2</MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:32:20 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "1",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:32:20 "DT-准备发送数据："{
+ "mat_name": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:32:20 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "2",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:32:20 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE>1</MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:32:20 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称2</MAT_NAME>\r\n            <MAT_CODE>2</MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:32:21 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "1",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:32:21 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "2",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:32:21 "DT-准备发送数据："{
+ "mat_name": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:32:21 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE>1</MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:32:58 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:32:58 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:32:58 "DT-准备发送数据："{
+ "mat_name": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:32:58 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:32:58 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称2</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:32:59 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:32:59 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:32:59 "DT-准备发送数据："{
+ "mat_name": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:32:59 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:34:10 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:34:10 "DT-准备发送数据："{
+ "mat_name": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:34:10 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:34:10 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:34:10 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称2</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:34:11 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:34:11 "DT-准备发送数据："{
+ "mat_name": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:34:11 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:34:11 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:34:48 "json:"{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206"
+}
+
+2015-11-22 21:34:48 "json:"{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206"
+}
+
+2015-11-22 21:34:48 "json:"{
+ "mat_name": ""
+}
+
+2015-11-22 21:34:48 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:34:48 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:34:48 "DT-准备发送数据："{
+ "mat_name": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:34:48 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称2</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:34:48 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:34:49 "json:"{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206"
+}
+
+2015-11-22 21:34:49 "DT-准备发送数据："{
+ "mat_name": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:34:49 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:34:49 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:34:49 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:34:49 "json:"{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206"
+}
+
+2015-11-22 21:34:49 "json:"{
+ "mat_name": ""
+}
+
+2015-11-22 21:34:49 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称2</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:37:14 "json:"{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206"
+}
+
+2015-11-22 21:37:14 "json:"{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206"
+}
+
+2015-11-22 21:37:14 "批量上传返回结果:"[]
+
+2015-11-22 21:37:26 "json:"{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206"
+}
+
+2015-11-22 21:37:26 "json:"{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206"
+}
+
+2015-11-22 21:37:26 "批量上传返回结果:"[]
+
+2015-11-22 21:37:55 "DT-准备发送数据："{
+ "mat_name": "名称1",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:37:55 "DT-准备发送数据："{
+ "mat_name": "名称2",
+ "mat_code": "",
+ "specs": "规格",
+ "company": "南京医药厂",
+ "amount": "11",
+ "num": "2",
+ "dept": "内科",
+ "doctor": "王凡",
+ "form_date": "201206",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-22 21:37:55 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称1</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:37:55 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_TOP_MATERIAL</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_TOP_MATERIAL>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <MAT_NAME>名称2</MAT_NAME>\r\n            <MAT_CODE></MAT_CODE>\r\n            <SPECS>规格</SPECS>\r\n            <COMPANY>南京医药厂</COMPANY>\r\n            <AMOUNT>11</AMOUNT>\r\n            <NUM>2</NUM>\r\n            <DEPT>内科</DEPT>\r\n            <DOCTOR>王凡</DOCTOR>\r\n            <FORM_DATE>201206</FORM_DATE>\r\n        </TB_TOP_MATERIAL>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-22 21:37:57 "WS-接收报文: ""<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><PunishDataUploadResponse xmlns=\"http://www.gxws.gov.cn/\"><PunishDataUploadResult>ORA-01400: 无法将 NULL 插入 (\"PUNISHMENT\".\"TB_TOP_MATERIAL\".\"MAT_CODE\")</PunishDataUploadResult></PunishDataUploadResponse></soap:Body></soap:Envelope>"
+
+2015-11-22 21:37:57 "WS-接收报文: ""<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><PunishDataUploadResponse xmlns=\"http://www.gxws.gov.cn/\"><PunishDataUploadResult>ORA-01400: 无法将 NULL 插入 (\"PUNISHMENT\".\"TB_TOP_MATERIAL\".\"MAT_CODE\")</PunishDataUploadResult></PunishDataUploadResponse></soap:Body></soap:Envelope>"
+
+2015-11-22 21:37:57 "批量上传返回结果:"[
+ {
+  "success": false,
+  "message": "ORA-01400:无法将NULL插入(\"PUNISHMENT\".\"TB_TOP_MATERIAL\".\"MAT_CODE\")",
+  "mat_name": "名称1"
+ },
+ {
+  "success": false,
+  "message": "ORA-01400:无法将NULL插入(\"PUNISHMENT\".\"TB_TOP_MATERIAL\".\"MAT_CODE\")",
+  "mat_name": "名称2"
+ }
+]

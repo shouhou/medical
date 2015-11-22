@@ -1,69 +1,80 @@
 <%- include header %>
-<link rel='stylesheet' href='/lib/jquery.simple-dtpicker.css' />
-<script src="/lib/jquery.simple-dtpicker.js"></script>
-<div class="title">
-    高值耗材前十名接口</div>
-<form action="/materialAdd/form" method="post" class='J_From'>
-    <div class="row">
-        <div class="span2 label">耗材名称</div>
-        <div class="span8">
-            <input type="text" class="input-normal" name='mat_name' placeholder='耗材名称'>
+    <link rel='stylesheet' href='/lib/jquery.simple-dtpicker.css' />
+    <script src="/lib/jquery.simple-dtpicker.js"></script>
+    <div class="title">
+        高值耗材前十名接口</div>
+    <form action="/material/materialAdd/upload" method="post" class='J_From' enctype='multipart/form-data'>
+        <div class="row">
+            <div class="span2 label"></div>
+            <div class="span4">
+                <input type="file" class="input-normal" name='tpl'>
+            </div>
+            <div class="span4">
+                <input type="submit" value="上传" class="button-normal J_UploadTpl">
+            </div>
         </div>
-        <div class="span2 label">耗材编号</div>
-        <div class="span8">
-            <input type="text" class="input-normal" name='mat_code' placeholder='耗材编号'>
+    </form>
+    <form action="/materialAdd/form" method="post" class='J_From'>
+        <div class="row">
+            <div class="span2 label">耗材名称</div>
+            <div class="span8">
+                <input type="text" class="input-normal" name='mat_name' placeholder='耗材名称'>
+            </div>
+            <div class="span2 label">耗材编号</div>
+            <div class="span8">
+                <input type="text" class="input-normal" name='mat_code' placeholder='耗材编号'>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="span2 label">规格</div>
-        <div class="span8">
-            <input type="text" class="input-normal" name='specs' placeholder='规格'>
+        <div class="row">
+            <div class="span2 label">规格</div>
+            <div class="span8">
+                <input type="text" class="input-normal" name='specs' placeholder='规格'>
+            </div>
+            <div class="span2 label">厂家</div>
+            <div class="span8">
+                <input type="text" class="input-normal" name='company' placeholder='厂家'>
+            </div>
         </div>
-        <div class="span2 label">厂家</div>
-        <div class="span8">
-            <input type="text" class="input-normal" name='company' placeholder='厂家'>
+        <div class="row">
+            <div class="span2 label">金额</div>
+            <div class="span8">
+                <input type="text" class="input-normal" name='amount' placeholder='金额'>
+            </div>
+            <div class="span2 label">数量</div>
+            <div class="span8">
+                <input type="text" class="input-normal" name='num' placeholder='数量'>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="span2 label">金额</div>
-        <div class="span8">
-            <input type="text" class="input-normal" name='amount' placeholder='金额'>
+        <div class="row">
+            <div class="span2 label">科室</div>
+            <div class="span8">
+                <input type="text" class="input-normal" name='dept' placeholder='科室'>
+            </div>
+            <div class="span2 label">医生</div>
+            <div class="span8">
+                <input type="text" class="input-normal" name='doctor' placeholder='医生'>
+            </div>
         </div>
-        <div class="span2 label">数量</div>
-        <div class="span8">
-            <input type="text" class="input-normal" name='num' placeholder='数量'>
+        <div class="row">
+            <div class="span2 label">所属年月：</div>
+            <div class="span8">
+                <input type="text" class='time J_ShortData' name='form_date'>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="span2 label">科室</div>
-        <div class="span8">
-            <input type="text" class="input-normal" name='dept' placeholder='科室'>
+        <div class="row">
+            <div class="span2 label">&nbsp;</div>
+            <div class="span2">
+                <input type="button" value="提交" class="button-normal J_Submit">
+            </div>
+            <div class="span2 label">&nbsp;</div>
+            <div class="span2">
+                <input type="button" value="返回" class="button-normal J_Return">
+            </div>
         </div>
-        <div class="span2 label">医生</div>
-        <div class="span8">
-            <input type="text" class="input-normal" name='doctor' placeholder='医生'>
-        </div>
-    </div>
-    <div class="row">
-        <div class="span2 label">所属年月：</div>
-        <div class="span8">
-            <input type="text" class='time J_ShortData' name='form_date'>
-        </div>
-    </div>
-    <div class="row">
-        <div class="span2 label">&nbsp;</div>
-        <div class="span2">
-            <input type="button" value="提交" class="button-normal J_Submit">
-        </div>
-        <div class="span2 label">&nbsp;</div>
-        <div class="span2">
-            <input type="button" value="返回" class="button-normal J_Return">
-        </div>
-    </div>
-</form>
-<script>
-seajs.use("page/materialAdd", function(Page) {
-    var page = new Page();
-})
-</script>
-<%- include footer %>
+    </form>
+    <script>
+    seajs.use("page/materialAdd", function(Page) {
+        var page = new Page();
+    })
+    </script>
+    <%- include footer %>

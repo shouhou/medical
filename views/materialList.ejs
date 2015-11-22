@@ -1,0 +1,43 @@
+<%- include header %>
+
+<div class="title">
+    高值耗材前十名接口</div>
+
+<input type="hidden" value='<%= dataStr %>' name='dataStr'>
+<% if (locals.error) { %>
+    <div id="alt_warning" class="alert alert-warning">
+        <%= error %>
+    </div>
+<% } %>
+<table class="table">
+    <tr>
+        <% header.forEach(function(head){ %>
+            <th><%= head %></th>
+        <% }) %>
+    </tr>
+
+    <% data.forEach(function(dat){ %>
+        <tr>
+            <% dat.forEach(function(da){ %>
+            <td>
+                <%= da %>
+            </td>
+            <% }) %>
+        </tr>
+    <% }) %>
+</table>
+<div class="row">
+    <div class="span1 label">&nbsp;</div>
+    <div class="span3">
+        <input type="submit" value="批量上传" class="button-normal J_BatchUpload">
+    </div>
+    <div class="span3">
+        <input type="submit" value="返回" class="button-normal J_Return">
+    </div>
+</div>
+<script>
+seajs.use("page/materialList", function(Page) {
+    var page = new Page();
+})
+</script>
+<%- include footer %>

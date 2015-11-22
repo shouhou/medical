@@ -7,7 +7,8 @@ exports.log = function() {
     for (var i in arguments) {
         // process.stdout.write(arguments[i] + '\n');
         console.log(arguments[i]);
-        msg += String(arguments[i]);
+        // msg += String(arguments[i]);
+        msg += JSON.stringify(arguments[i],null,' '); //util.inspect
     }
     process.send('\r\n' + msg + '\r\n');
 };

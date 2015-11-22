@@ -15,7 +15,7 @@
             <DOCTOR><%= doctor %></DOCTOR>
             <FORM_DATE><%= form_date %></FORM_DATE>
             <CREATE_DATE_TIME><%= create_date_time %></CREATE_DATE_TIME>
-            <STANDARD><%= create_date_time %></STANDARD>
+            <STANDARD><%= standard %></STANDARD>
         </TB_INDEX_EXAM>
     </Body>
 </Request>

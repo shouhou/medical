@@ -18,13 +18,14 @@ define('page/indexExamAdd', ['common/util'], function(require) {
                 event.preventDefault();
                 // var data = $('.J_From').serialize();
                 var data = $(".J_From").serializeArray();
-
+                 var json = Util.array2json(data);
+                json['amount'] = (parseFloat(json['amount'])).toFixed(2);
                 if (confirm('确认上传吗?')) {
                     $.ajax({
                         url: 'indexExamAdd/form',
                         type: 'post',
                         dataType: 'json',
-                        data: Util.array2json(data),
+                        data: json,
                         success: function(data) {
                             if (data && data.success) {
                                 alert('上传成功');
