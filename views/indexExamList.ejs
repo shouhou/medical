@@ -1,7 +1,7 @@
 <%- include header %>
 
 <div class="title">
-    高值耗材前十名接口</div>
+    医院大型检查接口</div>
 
 <input type="hidden" value='<% if(dataStr){%> <%= dataStr %><%} %>' name='dataStr'>
 <table class="table">
@@ -31,7 +31,7 @@
     </div>
 </div>
 <script>
-seajs.use("page/materialList", function(Page) {
+seajs.use("page/indexExamList", function(Page) {
     var page = new Page();
 })
 </script>

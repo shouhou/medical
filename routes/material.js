@@ -65,7 +65,7 @@ router.post('/materialAdd/upload', function(req, res) {
         var fileExt = filePath.substring(filePath.lastIndexOf('.'));
         if ('.csv'.indexOf(fileExt.toLowerCase()) === -1) {
             res.locals.error = '文件类型不正确';
-            res.render('materialList', {});
+            res.render('error', {});
         }
         fs.readFile(filePath, function(err, data) {
             if (err) {
@@ -98,27 +98,28 @@ router.post('/materialList/batchRPC', function(req, res) {
         var funcs = [];
         for (var i in datas) {
             var data = datas[i].split(',');
-            var keys = ['mat_name', 'mat_code', 'specs', 'company', 'amount', 'num', 'dept', 'doctor', 'form_date'];
-            var json = {};
-            for (var j in data) {
-                json[keys[j]] = data[j];
-            }
-            var func = async.apply(function(json, callback) {
-                material.getOut(json, function(out) {
-                    soap.sendReq(out, function(data) {
-                        data['mat_name'] = json['mat_name'];
-                        callback(null, data);
+            if (data.length > 1) {
+                var keys = ['mat_name', 'mat_code', 'specs', 'company', 'amount', 'num', 'dept', 'doctor', 'form_date'];
+                var json = {};
+                for (var j in data) {
+                    json[keys[j]] = data[j];
+                }
+                var func = async.apply(function(json, callback) {
+                    material.getOut(json, function(out) {
+                        soap.sendReq(out, function(data) {
+                            data['mat_name'] = json['mat_name'];
+                            callback(null, data);
+                        });
                     });
-                });
-            }, json);
-            funcs.push(func);
+                }, json);
+                funcs.push(func);
+            }
         }
         async.parallel(funcs, function(err, results) {
             log('批量上传返回结果:', results);
             res.send(results);
         });
     }
-
 });
 
 module.exports = router;

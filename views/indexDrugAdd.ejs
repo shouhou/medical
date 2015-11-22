@@ -3,6 +3,17 @@
 <script src="/lib/jquery.simple-dtpicker.js"></script>
 <div class="title">
     医院药品相关药品指标接口</div>
+<form action="/indexDrug/indexDrugAdd/upload" method="post" class='J_From' enctype='multipart/form-data'>
+    <div class="row">
+        <div class="span2 label"></div>
+        <div class="span4">
+            <input type="file" class="input-normal" name='tpl'>
+        </div>
+        <div class="span4">
+            <input type="submit" value="上传" class="button-normal J_UploadTpl">
+        </div>
+    </div>
+</form>
 <form action="/indexDrugAdd/form" method="post" class='J_From'>
     <div class="row">
         <div class="span2 label">药占比</div>
