@@ -46,7 +46,8 @@ define('page/issuesAdd', ['common/util'], function(require) {
                 "inline": false,
                 "locale": "cn",
                 "closeOnSelected": true,
-                "autodateOnStart": false
+                "autodateOnStart": false,
+                "dateFormat": "YYYY-MM-DD hh:mm:00"
             });
         }
     }

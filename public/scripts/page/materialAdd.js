@@ -46,7 +46,15 @@ define('page/materialAdd', ['common/util'], function(require) {
                 "inline": false,
                 "locale": "cn",
                 "closeOnSelected": true,
-                "autodateOnStart": false
+                "autodateOnStart": false,
+                "dateFormat": "YYYY-MM-DD hh:mm:00"
+            });
+            $('.J_ShortData').appendDtpicker({
+                "inline": false,
+                "locale": "cn",
+                "closeOnSelected": true,
+                "autodateOnStart": false,
+                "dateFormat": "YYYYMM"
             });
         }
     }
