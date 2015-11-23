@@ -1,0 +1,55 @@
+
+2015-11-23 15:06:46 "DB-数据库连接异常"
+
+2015-11-23 15:07:12 "DB-执行SQL: select id as id ,data_41 as event_id ,data_11 as event_name ,data_7 as event_date_time ,substring(data_18,1,1) as decision_type ,data_17 as decision_date_time ,data_19 as decision_result ,run_id as procedured_detail_id ,data_7 as procedured_date_time  from flow_data_113"
+
+2015-11-23 15:07:16 "DB-执行SQL: select id as id ,data_32 as event_id ,data_3 as event_name ,data_19 as event_date_time ,run_id as procedured_detail_id ,substring(data_28,1,1) as decision_type ,data_21 as decision_date_time ,data_14 as decision_result ,substring(data_29,1,1) as public_type ,data_27 as public_dtae_time ,data_16 as public_result ,substring(data_30,1,1) as tender_type ,data_23 as tender_date_time ,substring(data_31,1,1) as check_type ,data_24 as check_dtae_time ,data_17 as check_result  from flow_data_116"
+
+2015-11-23 15:15:34 "DT-准备发送数据："{
+ "patient_code": " 1",
+ "visit_no": "1",
+ "satisfaction": "1",
+ "satisfaction_content": "1",
+ "visit_date_time": "2012-1-1 12:12",
+ "record_date_time": "2012-1-1 12:12",
+ "visit_type": "1",
+ "undefined": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-23 15:15:34 "DT-准备发送数据："{
+ "patient_code": "1",
+ "visit_no": "1",
+ "satisfaction": "1",
+ "satisfaction_content": "1",
+ "visit_date_time": "2012-1-1 12:12",
+ "record_date_time": "2012-1-1 12:12",
+ "visit_type": "1",
+ "undefined": "",
+ "unit_code": "4509020020",
+ "unit_name": "玉林市第二人民医院",
+ "org_code": "49936034-6"
+}
+
+2015-11-23 15:15:34 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_SATISFACTION</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_SATISFACTION>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <PATIENT_CODE> 1</PATIENT_CODE>\r\n            <VISIT_NO>1</VISIT_NO>\r\n            <SATISFACTION>1</SATISFACTION>\r\n            <SATISFACTION_CONTENT>1</SATISFACTION_CONTENT>\r\n            <VISIT_DATE_TIME>2012-1-1 12:12</VISIT_DATE_TIME>\r\n            <RECORD_DATE_TIME>2012-1-1 12:12</RECORD_DATE_TIME>\r\n            <VISIT_TYPE>1</VISIT_TYPE>\r\n        </TB_SATISFACTION>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-23 15:15:34 "WS-发送报文: ""<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\"><soap12:Header><MySoapHeader xmlns=\"http://www.gxws.gov.cn/\"><_UnitCode>4509020020</_UnitCode><UserID>bas4509020020</UserID><PassWord>45090200202816202@gxwst</PassWord></MySoapHeader></soap12:Header><soap12:Body><PunishDataUpload xmlns=\"http://www.gxws.gov.cn/\"><xml> <![CDATA[<Request>\r\n    <Head>\r\n        <Function>TB_SATISFACTION</Function>\r\n        <Operation>0</Operation>\r\n    </Head>\r\n    <Body>\r\n        <TB_SATISFACTION>\r\n            <UNIT_CODE>4509020020</UNIT_CODE>\r\n            <UNIT_NAME>玉林市第二人民医院</UNIT_NAME>\r\n            <PATIENT_CODE>1</PATIENT_CODE>\r\n            <VISIT_NO>1</VISIT_NO>\r\n            <SATISFACTION>1</SATISFACTION>\r\n            <SATISFACTION_CONTENT>1</SATISFACTION_CONTENT>\r\n            <VISIT_DATE_TIME>2012-1-1 12:12</VISIT_DATE_TIME>\r\n            <RECORD_DATE_TIME>2012-1-1 12:12</RECORD_DATE_TIME>\r\n            <VISIT_TYPE>1</VISIT_TYPE>\r\n        </TB_SATISFACTION>\r\n    </Body>\r\n</Request>\r\n]]></xml></PunishDataUpload></soap12:Body></soap12:Envelope>"
+
+2015-11-23 15:15:37 "WS-接收报文: ""<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><PunishDataUploadResponse xmlns=\"http://www.gxws.gov.cn/\"><PunishDataUploadResult>1,成功</PunishDataUploadResult></PunishDataUploadResponse></soap:Body></soap:Envelope>"
+
+2015-11-23 15:15:37 "WS-接收报文: ""<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><PunishDataUploadResponse xmlns=\"http://www.gxws.gov.cn/\"><PunishDataUploadResult>1,成功</PunishDataUploadResult></PunishDataUploadResponse></soap:Body></soap:Envelope>"
+
+2015-11-23 15:15:37 "批量上传返回结果:"[
+ {
+  "success": true,
+  "message": "1,成功",
+  "patient_code": " 1"
+ },
+ {
+  "success": true,
+  "message": "1,成功",
+  "patient_code": "1"
+ }
+]
