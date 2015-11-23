@@ -8,25 +8,26 @@ var log = require('../models/common/log').log;
 // var builder = new xml2js.Builder(); //JSON->xml
 
 var options = {
-    host: '127.0.0.1',
-    port: 8888,
-    method: 'POST',
-    path: 'https://shouhou91.eicp.net:26402/BasWebService.asmx?wsdl',
+    // host: '127.0.0.1',
+    // port: 8888,
+    // method: 'POST',
+    // path: 'https://shouhou91.eicp.net:26402/BasWebService.asmx?wsdl',
     // path: 'https://59.211.16.98:4439/BasWebService.asmx?wsdl',
-
-    // hostname:'shouhou91.eicp.net',
-    // port:26402,
-    // path:'/BasWebService.asmx?wsdl',
+    
+    hostname: '59.211.16.98',
+    port: 4439,
+    path: '/BasWebService.asmx?wsdl',
+    method: 'POST',
+    rejectUnauthorized: false,
     headers: {
         // 'Content-Type': 'text/xml; charset=utf-8',
         // 'Content-Length': Buffer.byteLength(data),
-        // 'SOAPAction': 'http://www.gxws.gov.cn/PunishDataUpload'
         'Content-Type': 'application/soap+xml; charset=utf-8'
     }
 };
 
 function fetchReq(options, type, data, callback) {
-    var req = http.request(options);
+    var req = https.request(options);
     var chunks = '';
     // var chunks = [];
     req.on('error', function(err) {
@@ -119,7 +120,7 @@ module.exports = {
                 log('WS-接收报文: ', res.data);
                 var rtn = parseRes(res.data, 'PunishDataUploadResult');
                 callback(rtn);
-            }else{
+            } else {
                 callback(res);
             }
         });
